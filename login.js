@@ -1,8 +1,7 @@
 const roblox = require('noblox.js');
-const db = require('../db.js');
 
 exports.run = async (client, message, args) => {
-    if(message.author.id != "465362236693807115") {
+    if(message.author.id != "PUT YOUR DISCORD ID HERE") {
         return message.channel.send("You don't have permission to run this command!");
     }
     if(message.channel.type !== "dm") {
@@ -28,8 +27,6 @@ exports.run = async (client, message, args) => {
     } catch (err) {
         return message.channel.send("There was an error while logging in: " + err);
     }
-    await db.set("username", username);
-    await db.set("password", password);
     return message.channel.send(`You have logged in to the account **${username}**.`);
 }
 
