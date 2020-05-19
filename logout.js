@@ -17,15 +17,3 @@ exports.run = async (client, message, args) => {
     }
     return message.channel.send("You have logged out of the account!");
 }
-
-exports.help = (client, message, args) => {
-    message.channel.send({embed: {
-        color: 7948427,
-        description: `**Logout**\n`
-        + `\`${client.config.prefix}logout\` - Logs outs of the logged in Roblox account, sadly only the onwer of the bot can use this.`,
-        author: {
-            name: message.author.tag,
-            icon_url: message.author.displayAvatarURL()
-        }
-    }});
-}
