@@ -1,5 +1,4 @@
 const roblox = require('noblox.js');
-const db = require('../db.js');
 
 exports.run = async (client, message, args) => {
     if(message.author.id != "465362236693807115") {
@@ -16,8 +15,6 @@ exports.run = async (client, message, args) => {
     } catch (err) {
         return message.channel.send("There was an error while logging out: " + err);
     }
-    await db.set("username", null);
-    await db.set("password", null);
     return message.channel.send("You have logged out of the account!");
 }
 
