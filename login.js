@@ -29,15 +29,3 @@ exports.run = async (client, message, args) => {
     }
     return message.channel.send(`You have logged in to the account **${username}**.`);
 }
-
-exports.help = (client, message, args) => {
-    message.channel.send({embed: {
-        color: 7948427,
-        description: `**Login**\n`
-        + `\`${client.config.prefix}login <username> <password>\` - Logs into a Roblox account using the supplied username and password, sadly only the onwer of the bot can use this. This can only be used in the DMs of the bot!`,
-        author: {
-            name: message.author.tag,
-            icon_url: message.author.displayAvatarURL()
-        }
-    }});
-}
