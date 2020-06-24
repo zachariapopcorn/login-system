@@ -1,7 +1,7 @@
 const roblox = require('noblox.js');
 
 exports.run = async (client, message, args) => {
-    if(message.author.id != "465362236693807115") {
+    if(message.author.id != "PUT YOUR DISCORD ID HERE") {
         return message.channel.send("You don't have permission to run this command!");
     }
     try {
